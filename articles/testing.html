@@ -1,0 +1,342 @@
+<!DOCTYPE html>
+<!-- saved from url=(0043)https://academy.apeworx.io/articles/testing -->
+<html data-wf-domain="academy.apeworx.io" data-wf-page="621fba8df61b3f1f30594ea8" data-wf-site="61777341073c361859b96860" class="w-mod-js w-mod-ix wf-varela-n4-active wf-inconsolata-n4-active wf-inconsolata-n7-active wf-spacemono-n4-active wf-spacemono-i4-active wf-spacemono-n7-active wf-barlowcondensed-n3-active wf-barlowcondensed-n4-active wf-barlowcondensed-n6-active wf-barlowcondensed-n7-active wf-barlowcondensed-n8-active wf-barlowcondensed-n9-active wf-active"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><style>.wf-force-outline-none[tabindex="-1"]:focus{outline:none;}</style><title>ApeWorx Academy</title><meta content="ApeWorx Academy is your guide to building Web3 applications on the Ape Framework" name="description"><meta content="width=device-width, initial-scale=1" name="viewport"><link href="./testing_files/apeworx-academy.0a673c2ea.css" rel="stylesheet" type="text/css"><link href="https://fonts.googleapis.com/" rel="preconnect"><link href="https://fonts.gstatic.com/" rel="preconnect" crossorigin="anonymous"><script src="./testing_files/webfont.js" type="text/javascript"></script><link rel="stylesheet" href="./testing_files/css" media="all"><script type="text/javascript">WebFont.load({  google: {    families: ["Varela:400","Inconsolata:400,700","Space Mono:regular,italic,700","Barlow Condensed:300,regular,600,700,800,900"]  }});</script><script type="text/javascript">!function(o,c){var n=c.documentElement,t=" w-mod-";n.className+=t+"js",("ontouchstart"in o||o.DocumentTouch&&c instanceof DocumentTouch)&&(n.className+=t+"touch")}(window,document);</script><link href="https://assets.website-files.com/61777341073c361859b96860/6227c00b67e9b492a696dc07_Ape_Academy_Favicon.png" rel="shortcut icon" type="image/x-icon"><link href="https://assets.website-files.com/61777341073c361859b96860/639cc79fa0716a375ef773b0_apeWebClip_256.png" rel="apple-touch-icon"><script async="" src="./testing_files/js"></script><script type="text/javascript">window.dataLayer = window.dataLayer || [];function gtag(){dataLayer.push(arguments);}gtag('js', new Date());gtag('config', 'G-4Y6EZ2P3LE', {'anonymize_ip': false});</script><!-- Mom's -->
+<script defer="" data-domain="academy.apeworx.io" src="./testing_files/script.js"></script>
+
+
+
+<style>
+  code {
+    background-color:black!important;
+    border: 1px solid #999;
+    display: block;
+    padding: 20px;
+    font-size: 1.25vw;
+    line-height: 20px;
+    border-radius: 5px;
+    width: 100%;
+    min-width: 100%;
+    overflow: visible!important;
+}
+</style>
+
+
+<link rel="stylesheet" href="./testing_files/prism-tomorrow.min.css">
+
+<style>
+code[class*=language-], pre[class*=language-] {
+    
+    font-family: Consolas,Monaco,'Andale Mono','Ubuntu Mono',monospace;
+    font-size: 12px;
+    text-align: left;
+    white-space: pre;
+    word-spacing: normal;
+    word-break: normal;
+    word-wrap: normal;
+    line-height: 1.5;
+    -moz-tab-size: 4;
+    -o-tab-size: 4;
+    tab-size: 4;
+    -webkit-hyphens: none;
+    -moz-hyphens: none;
+    -ms-hyphens: none;
+    hyphens: none;
+    background-color:black;
+    color:white;
+    
+    
+    @media (max-width: 767px) { 
+    max-width: 700px;
+    font-size: 14px;
+    }
+    
+     @media (max-width: 320px) { 
+    font-size: 10px;
+    max-width: 320px; 
+    }
+    
+    
+}
+</style>
+
+<style>
+pre code {
+    background-color: #000;
+    border: 1px solid #000;
+    display: block;
+    padding: 20px;
+    width: 100%;
+    min-width: 900px;
+    color: white;
+}
+</style>
+</head><body><div class="div-block-243"><div class="w-embed"><style>
+
+
+pre code {
+  background-color: #eee;
+  border: 1px solid #999;
+  display: block;
+  padding: 20px;
+}
+
+</style></div></div><div data-animation="default" data-collapse="medium" data-duration="400" data-easing="ease" data-easing2="ease" role="banner" class="navbar-3 w-nav"><div class="container-5 w-container"><a href="https://academy.apeworx.io/" class="navbrand w-nav-brand" aria-label="home"><img src="./testing_files/6224aab0239833413c820c05_academy_logo_1_aArtboard-1.png" loading="lazy" width="295" alt="" srcset="https://assets.website-files.com/61777341073c361859b96860/6224aab0239833413c820c05_academy_logo_1_aArtboard-1-p-500.png 500w, https://assets.website-files.com/61777341073c361859b96860/6224aab0239833413c820c05_academy_logo_1_aArtboard-1-p-800.png 800w, https://assets.website-files.com/61777341073c361859b96860/6224aab0239833413c820c05_academy_logo_1_aArtboard-1-p-1080.png 1080w, https://assets.website-files.com/61777341073c361859b96860/6224aab0239833413c820c05_academy_logo_1_aArtboard-1-p-1600.png 1600w, https://assets.website-files.com/61777341073c361859b96860/6224aab0239833413c820c05_academy_logo_1_aArtboard-1.png 1883w" sizes="(max-width: 479px) 70vw, (max-width: 767px) 285px, 295px" class="image-6"></a><div class="spacxer"></div><nav role="navigation" class="nav-menu-3 w-nav-menu"><a href="https://academy.apeworx.io/new" class="yoyo w-nav-link">WHAT'S NEW</a><a href="https://academy.apeworx.io/getting-started" class="nav-link-6 w-nav-link">GETTING&nbsp;STARTED</a><a href="https://academy.apeworx.io/community-2" class="nav-link-7 w-nav-link">COMMUNITY</a><a href="https://academy.apeworx.io/show" class="nav-link-8 w-nav-link">SHOWCASE</a><a href="https://academy.apeworx.io/tutorials" class="nav-tutorials-link w-nav-link">TUTORIALS</a></nav><div class="menu-button-3 w-nav-button" style="-webkit-user-select: text;" aria-label="menu" role="button" tabindex="0" aria-controls="w-nav-overlay-0" aria-haspopup="menu" aria-expanded="false"><div class="icon-2 w-icon-nav-menu"></div></div></div><div class="w-nav-overlay" data-wf-ignore="" id="w-nav-overlay-0"></div></div><header id="nav" class="sticky-nav"><nav class="container w-container"><a href="https://academy.apeworx.io/articles/testing#" class="link-block-2 w-inline-block"><img src="./testing_files/6224aab0239833413c820c05_academy_logo_1_aArtboard-1.png" loading="lazy" width="150" alt="" srcset="https://assets.website-files.com/61777341073c361859b96860/6224aab0239833413c820c05_academy_logo_1_aArtboard-1-p-500.png 500w, https://assets.website-files.com/61777341073c361859b96860/6224aab0239833413c820c05_academy_logo_1_aArtboard-1-p-800.png 800w, https://assets.website-files.com/61777341073c361859b96860/6224aab0239833413c820c05_academy_logo_1_aArtboard-1-p-1080.png 1080w, https://assets.website-files.com/61777341073c361859b96860/6224aab0239833413c820c05_academy_logo_1_aArtboard-1-p-1600.png 1600w, https://assets.website-files.com/61777341073c361859b96860/6224aab0239833413c820c05_academy_logo_1_aArtboard-1.png 1883w" sizes="100vw" class="image"></a><div class="topspacer"></div><div class="div-block-4"><div class="div-block-5"><a href="https://docs.apeworx.io/ape/stable/" class="link-2">Documentation</a></div><div class="div-block-5"><a href="https://academy.apeworx.io/articles/testing#" class="link-2">Lesson Plans</a></div><div class="div-block-6"><a href="https://academy.apeworx.io/resources" class="link-2">Resources</a></div><div class="div-block-7"><a href="https://academy.apeworx.io/articles/testing#" class="link-2">Support</a></div><div class="div-block-8"><a href="https://academy.apeworx.io/articles/testing#" class="link-2">Videos</a></div></div></nav></header><div class="toppage_side"><div class="div-block-222"><div class="div-block-221"><div class="top-a"><div class="div-block-45"><a href="https://academy.apeworx.io/articles/testing#" class="w-inline-block"><img src="./testing_files/617773981d241830df64122a_apeworx_LOGO 3.png" loading="lazy" alt="" class="image-5"></a><a href="https://academy.apeworx.io/tutorials" class="sidebar-header-links-title">TUTORIALS</a></div><div class="div-block-3"><a href="https://academy.apeworx.io/getting-started" class="link">Getting Started</a></div><div class="div-block-3"><a href="https://academy.apeworx.io/tutorials/accounts" class="link">Accounts</a></div><div class="div-block-3"><a fs-cmsfilter-field="plugins" href="https://academy.apeworx.io/tutorials/plugins" class="link">Plugins</a></div><div class="div-block-3"></div><div class="div-block-3"><a href="https://academy.apeworx.io/tutorials/console" class="link">Console</a></div><div class="div-block-3"></div><div class="div-block-3"></div><div class="div-block-3"><a href="https://academy.apeworx.io/tutorials/tokens" class="link">Tokens</a></div><div class="div-block-3"><a href="https://academy.apeworx.io/tutorials/testing" class="link">Testing Contracts</a></div><div class="div-block-3"><a href="https://academy.apeworx.io/tutorials/deploying-contracts" class="link">Deploying Contracts</a></div></div><h1 class="selecteda">CLONEABLE&nbsp;PROJECTS</h1><div class="div-block-3"></div><div class="div-block-3"><a href="http://academy.apeworx.io/articles/make-an-erc20-token" class="link">ERC20 Token</a></div><div data-hover="false" data-delay="0" class="w-dropdown"><div class="dropdown-toggle w-dropdown-toggle" id="w-dropdown-toggle-0" aria-controls="w-dropdown-list-0" aria-haspopup="menu" aria-expanded="false" role="button" tabindex="0"><div class="w-icon-dropdown-toggle" aria-hidden="true"></div><div class="text-block-38">ERC721 NFT</div></div><nav class="dropdown-list-2 w-dropdown-list" id="w-dropdown-list-0" aria-labelledby="w-dropdown-toggle-0"><a href="http://academy.apeworx.io/articles/erc721-token" class="dropdown-link-4 w-dropdown-link" tabindex="0">ERC721 pt1</a><a href="https://academy.apeworx.io/articles/erc721-part-2" class="dropdown-link-5 w-dropdown-link" tabindex="0">ERC721 pt2</a></nav></div><div class="div-block-3"></div><div class="div-block-3"></div><h1 class="selecteda">Resources</h1><div class="div-block-3"><a href="https://docs.apeworx.io/ape/stable/index.html" class="link">Ape Documentation</a></div><div class="div-block-3"><a href="https://academy.apeworx.io/request" class="link">Request a Tutorial</a></div><div class="div-block-3"><a href="https://academy.apeworx.io/articles/porting-brownie-to-ape" class="link">From Brownie to Ape</a></div><h1 class="selecteda">Submit Project </h1><div class="div-block-3"><a href="https://academy.apeworx.io/articles/testing#" class="link"></a></div><div class="div-block-3"><a href="https://academy.apeworx.io/show" class="link">Submit to Showcase</a></div><div class="div-block-3"></div><h1 class="selecteda">KNOWLEDGE&nbsp;BASE</h1><div class="div-block-3"></div><div class="div-block-3"><a href="https://academy.apeworx.io/community-2" class="link">Community</a></div><div class="div-block-3"><a href="https://academy.apeworx.io/resources" class="link">Community Resources</a></div></div></div></div><div class="main_article_content"><div class="article_title_wrapper"><div class="desc-section"><div style="background-image:url(&quot;https://assets-global.website-files.com/621fba8cefe60d1ddffcb9bf/6296afdb9e26e3441745a496_3)%20Testing%20Contracts.png&quot;)" class="article_div_mainimage"><div id="Canvas" style="background-image:url(&quot;https://assets-global.website-files.com/621fba8cefe60d1ddffcb9bf/6296afdb9e26e3441745a496_3)%20Testing%20Contracts.png&quot;)" class="div-block-13"><div><div class="div-block-15"><div class="div-block-14"></div></div></div><a href="https://academy.apeworx.io/articles/testing#" class="button-3 w-button">Testing</a><div class="w-embed"><style>
+
+pre code {
+  background-color: #eee;
+  border: 1px solid #999;
+  display: block;
+  padding: 20px;
+}
+</style></div></div></div><div class="article_div_title_a"><div class="article_title_wrapper"><h1 class="cms_title">Testing Contracts Like an Ape</h1></div><div class="div_meta_wrap"><div class="div_written"><div class="text-block-5">written by</div><a href="https://academy.apeworx.io/author/just-a-doggie" class="link-3">Just A Doggie</a></div><div class="div_updated"><div class="div_lastupdated"><div class="text-block-19">Date Last Updated </div><div class="text-block-14">June 1, 2022</div></div></div></div><div class="div_meta_wrap_2"><div class="div-block-111"><a href="https://academy.apeworx.io/articles/testing#" class="button-16 w-button">Tutorial</a><a href="https://academy.apeworx.io/articles/testing#" class="button-16 w-button">Project Files</a><a href="https://academy.apeworx.io/articles/testing#" class="button-16 w-button">Video</a></div></div><a href="https://academy.apeworx.io/articles/testing#" class="button_downloadfiles w-condition-invisible w-button">Download Project Files</a></div></div></div><div class="article_video"><div class="description"><div class="cms_description w-richtext"><p>Testing is absolutely critical for Web3 development, and testing with Ape is no slouch. Based on the powerful and well-trusted Pytest testing library, Ape Test lets you verify your smart contracts with advanced features like fixtures, parametrization, reporting, and more!</p><p>‍</p></div></div><div id="w-node-f85ea73f-f29f-c3a1-99ff-5e1b553488b8-30594ea8" class="article-video-wrapper"><div style="padding-top:56.20608899297424%" class="video-2 w-video w-embed"><iframe class="embedly-embed" src="./testing_files/media.html" width="854" height="480" scrolling="no" title="YouTube embed" frameborder="0" allow="autoplay; fullscreen" allowfullscreen="true"></iframe></div></div></div><div class="article_div_contenta"><div id="w-node-b769cddb-c407-0f22-8e51-e8672b958c88-30594ea8"><div id="w-node-d507db47-bc13-fd05-c178-7820571549dd-30594ea8" class="cms_content_a w-richtext"><h1>Testing Contracts like an Ape</h1><p>Testing is critical for Web3 development, and testing with Ape is no slouch. Based on the powerful and well-trusted Pytest testing library, Ape Test lets you verify your smart contracts with advanced features like fixtures, parametrization, reporting, and more!</p><h2>Fixtures</h2><p>Fixtures allow you to specify the setup order of the contracts and other resources necessary to test your contracts and customize them to your needs. The way fixtures work is that you define functions in a<strong>&nbsp;conftest.py </strong>file with the <strong>pytest.fixture&nbsp;</strong>decorator applied, with the input arguments being whatever other fixtures your fixture depends on.</p><p>In this example, we have two account fixtures that we are going to use in our test suite: the <strong>owner&nbsp;</strong>account and the receiver account. Notice that these are using two different indices of the built-in <strong>accounts </strong>fixture, which is provided to allow you access to test accounts within your test. These fixtures have<strong>&nbsp;"session"&nbsp;</strong>scoping, which means they are created once and useable over the entire test session.</p><div class="w-embed"><pre><code class="language-bash">
+@pytest.fixture(scope="session")
+def owner(accounts):
+    return accounts[0]
+
+@pytest.fixture(scope="session")
+def receiver(accounts):
+    return accounts[1]
+</code>
+</pre></div><p>A great use case for fixtures is when you want to deploy some contracts as the base scenario in your test suite. Here, for example, we want to deploy our <strong>token </strong>contract once at the start of our test suite and reuse a snapshot for that deployment in all of our test cases that use the <strong>token </strong>fixture. This is why we will also give this fixture "<strong>session</strong>" scoping to ensure that the deployment only happens once and not for every test that is run. Utilizing the snapshot feature of fixture scoping allows us to improve the setup time of our test suite since we only make one deployment overall.</p><p>To create the <strong>token </strong>fixture, we want to use our <strong>owner </strong>fixture, which plays an essential role in our test suite, to deploy the <strong>Token </strong>contract type compiled from our <strong>project</strong>. We will then return the deployed contract instance from this function, which will become stored for use in every test case.</p><p><br></p><div class="w-embed"><pre><code class="language-bash">
+@pytest.fixture(scope="session")
+def token(owner, project):
+    return owner.deploy(project.Token)
+</code>
+</pre></div><p>‍</p><p>For more information about fixtures, check out the <a href="https://docs.pytest.org/en/7.1.x/how-to/fixtures.html">pytest documentation</a>.</p><h2>Writing Tests</h2><p>Now that we have our fixtures, we can explore creating the tests in our test suite. We can see several functions representing our test cases in our test suite. These work similarly to how fixtures work in that all of the arguments will be fixtures from our conftest.py file, but here the difference is that there is no pytest.fixture decorator, and every test case function name must start with test_*.</p><p>‍</p><div class="w-embed"><pre><code class="language-bash">
+def test_initial_state(token, owner):
+    """
+    Test inital state of the contract.
+    """
+    ...
+
+
+</code>
+</pre></div><h4>Initial Conditions Test</h4><p>In our first test, we will take our deployed token contract and the owner variable that deployed it and do some assertion checks on the initial conditions of the contract. We will make no changes to the state of the contract during this test case, just calling view methods to check that the initial conditions are as we expect them to be. For example, the ERC-20 Metadata extension defines the token's name, symbol, and decimals methods. Additionally, we will check non-ERC-20 methods like owner to see if the internal state is consistent with our setup conditions in the contract, where the owner is set as the deployer. Lastly, we will check the pre-mint amount of tokens given to the owner, which we gave 1000. The totalSupply and balanceOf methods should reflect that these 1000 tokens were issued, which is important because we want to ensure the accounting is consistent from the start.</p><p>‍</p><div class="w-embed"><pre><code class="language-bash">
+
+def test_initial_state(token, owner):
+    """
+    Test inital state of the contract.
+    """
+    # Check the token meta matches the deployment 
+    # token.method_name() has access to all the methods in the smart contract.
+    assert token.name() == "Ape Token"
+    assert token.symbol() == "APE"
+    assert token.decimals() == 18
+
+    # Check of intial state of authorization
+    assert token.owner() == owner
+    
+    # Check intial balance of tokens
+    assert token.totalSupply() == 1000
+    assert token.balanceOf(owner) == 1000 
+
+</code>
+</pre></div><p>‍</p><p>Having an initial condition check like this is an excellent foundation to build out a test suite because it ensures you validate all of your base case expectations for your contract to build off of in other tests where more complex actions will happen.</p><h4><strong>transfer</strong> Test</h4><p>The next case I want to show is the transfer method, which allows an owner of tokens to send them to another address. The ERC-20 specification defines several conditions that should hold for this transfer to be considered valid.</p><p>Again, we will use the token and owner fixtures defined in our conftest.py and our receiver fixture to represent the account that receives the tokens. It's important our receiver account is indeed different from the owner account so that we can show tokens were actually transferred between accounts.</p><p>To start our test case, we want to demonstrate that we begin with the correct initial conditions, namely that our owner has 1000 tokens, and our receiver has none.</p><p>‍</p><div class="w-embed"><pre><code class="language-bash">
+
+def test_transfer(token, owner, receiver, accounts):
+    """
+    Transfer must transfer an amount to an address.
+    Must fire Transfer Event.
+    Should throw an error of balance if sender does not have enough.
+    """
+
+    assert token.balanceOf(owner) == 1000
+    assert token.balanceOf(receiver)  == 0
+    assert token.totalSupply() == 1000
+
+</code>
+</pre></div><p>‍</p><p>This sets the scene for what we will do next: execute the actual transfer. One important thing to check is that the transaction emits the Transfer event, which the ERC-20 specification requires. Since this is the only event that should occur during this transaction, we will check that there is just one Transfer event. We will also make sure that all of the arguments of the log are specified correctly as well.</p><p>‍</p><div class="w-embed"><pre><code class="language-bash">
+
+tx = token.transfer(receiver, 100, sender=owner)
+
+    # validate that Transfer Log is correct
+    logs = list(tx.decode_logs(token.Transfer))
+    assert len(logs) == 1
+    assert logs[0].sender == owner
+    assert logs[0].receiver == receiver
+    assert logs[0].amount == 100
+
+</code>
+</pre></div><p>‍</p><p>Finally, we will check the state changes present after performing these transactions, where we sent 100 tokens from the owner to the receiver. We will assert that the balance of the owner's address is 100 tokens less, and the balance of the receiver is 100 tokens more. Here we also ensure that the totalSupply did not change as a result of the transaction.</p><p>‍</p><div class="w-embed"><pre><code class="language-bash">
+
+    assert token.balanceOf(receiver)  == 100
+    assert token.balanceOf(owner) == 900
+    assert token.totalSupply() == 1000
+
+</code>
+</pre></div><p>‍</p><p>The above scenario is an excellent example of a "positive assertion", meaning that we checked the actual outcome of an action with our expected result. This is an effective strategy for correctly testing smart contracts' behavior and something you should master.</p><p>The other type of scenario to check for is "negative assertions", which are checks that an action<em>cannot</em>be performed under the current scenario. Per ERC-20, a transfer action should fail if the authorizing account does not have a sufficient balance to complete the call. Per our previous action, we know that our receiver account has 100 tokens. However, our transaction will fail if we try to transfer more than that. We can show this by using the ape.reverts command, which checks that the line immediately inside the with statement will fail with a contract logic revert exception.</p><p>‍</p><div class="w-embed"><pre><code class="language-bash">
+
+  # Expected insufficient funds failure
+    with ape.reverts():
+        token.transfer(owner, 200, sender=receiver)
+
+</code>
+</pre></div><p>‍</p><p>To complete the testing of our token contract, we should check for edge cases or scenarios at the edges of what we expect in the normal flow. The ERC-20 specification describes a scenario when a holder moves 0 tokens to any other contract. Under this scenario, ERC-20 recommends<em>not</em>reverting, even though the scenario is unusual. Here the check is that it is possible to make this call, and no further checks are required.</p><p>‍</p><div class="w-embed"><pre><code class="language-bash">
+
+    # Transfers of 0 values MUST be treated as normal transfers 
+    token.transfer(owner, 0, sender=owner)
+
+</code>
+</pre></div><p>‍</p><h4>transferFrom Test</h4><p>Our last test case is a more advanced method defined in ERC-20 that lets an owner of tokens specify a certain allowance of tokens that a spender account can move on its behalf. This is a useful function because ERC-20 transfer methods do not allow any further processing in the call, and it is fairly common to want to be able to ensure a certain amount of tokens were given to a calling contract before doing anything in return (such as a DEX or NFT trade use case).</p><p>To start, we define one additional role spender as another account index from our accounts built-in fixture. After that role is set up, we want to show some initial conditions hold true for the start of our test.</p><p>‍</p><div class="w-embed"><pre><code class="language-bash">
+
+    spender = accounts[2]
+    
+    assert token.balanceOf(owner) == 1000
+    assert token.balanceOf(receiver)  == 0
+    assert token.balanceOf(spender)  == 0
+    assert token.totalSupply() == 1000
+    
+    assert token.allowance(owner, spender) == 0
+
+</code>
+</pre></div><p>‍</p><p>First, we want to do a negative assertion according to the ERC-20 specification that a spender account cannot move any tokens on behalf of another party without previously being approved. Here we are calling the transferFrom function with ape.reverts to show that this is true.</p><p>‍</p><div class="w-embed"><pre><code class="language-bash">
+
+    # Spender with no allowance cannot send tokens on someone behalf
+    with ape.reverts():
+        token.transferFrom(owner, receiver, 300, sender=spender)
+
+</code>
+</pre></div><p>Now that we've shown this negative assertion, we will want to show the positive counterexample for that same condition, namely, if there is an approval, the spender is now authorized to move tokens on behalf of the owner account. ERC-20 defines the Approval event, which must be emitted whenever the allowance changes for a particular account. We check that only one event of that type is emitted and that the logged data for that event matches our expectations. Lastly, we check the updated allowance for the spender account from the owner account.</p><p>‍</p><div class="w-embed"><pre><code class="language-bash">
+
+    # get approval for allowance from owner
+    tx = token.approve(spender, 300, sender=owner)
+
+    logs = list(tx.decode_logs(token.Approval))
+    assert len(logs) == 1
+    assert logs[0].owner == owner
+    assert logs[0].spender == spender
+    assert logs[0].amount == 300
+    
+    assert token.allowance(owner,spender) == 300
+
+</code>
+</pre></div><p>‍</p><p>Now that we've set up the allowance for the spender account, the next step is to commit a transferFrom action. Like the previous test, we want to show that the Transfer event is also emitted during the transferFrom method and that the data logged match the expected values. Finally, we want to show that the allowance for the spender account is lowered by the same amount of tokens that were transferred during the call to the transferFrom method.</p><p>‍</p><div class="w-embed"><pre><code class="language-bash">
+
+    # with auth use the allowance to send to receiver via spender(operator)
+    tx = token.transferFrom(owner, receiver, 200, sender=spender)
+
+    logs = list(tx.decode_logs(token.Transfer))
+    assert len(logs) == 1
+    assert logs[0].sender == owner
+    assert logs[0].receiver == receiver
+    assert logs[0].amount == 200
+
+    assert token.allowance(owner,spender) == 100
+
+</code>
+</pre></div><p>‍</p><p>Here we want to do another variation of the first negative assertion we performed, namely that even if a particular allowance is given to a spender account, more than that amount cannot be processed using transferFrom. This is perhaps redundant with the previous negative assertion, but it is nice to demonstrate that corner cases hold as expected.</p><p>‍</p><div class="w-embed"><pre><code class="language-bash">
+
+    # cannot exceed authorized allowance
+    with ape.reverts():
+        token.transferFrom(owner, receiver, 200, sender=spender)
+
+</code>
+</pre></div><p>‍</p><p>To finish the test case, we want to show that transferring the last amount of allowance will work and decrement the allowance to zero. We also check that there were overall 300 tokens transferred between owner and receiver and that the spender account did not gain anything by performing this transfer. Additionally, we double-check that no tokens were created or destroyed during these calls.</p><p>‍</p><div class="w-embed"><pre><code class="language-bash">
+
+    # transferFrom 100 tokens
+    token.transferFrom(owner, receiver, 100, sender=spender) 
+    assert token.balanceOf(spender) == 0
+    assert token.balanceOf(receiver) == 300
+    assert token.balanceOf(owner) == 700
+    assert token.totalSupply() == 1000
+
+    assert token.allowance(owner,spender) == 0
+
+</code>
+</pre></div><p>Now that we have several test cases demonstrating the proper function of our token contract, we will want to execute these functions using ape test.</p><h2>Running Tests</h2><p><strong>ape test</strong> is a thin wrapper around pytest that initializes our test session with several Ape-specific setup conditions, such as our built-in fixtures, testing snapshots, and initializing the network connection. It will also download dependencies, compile the project, and ensure that all the artifacts are up to date before running the suite.</p><p>‍</p><div class="w-embed"><pre><code class="language-bash">
+
+$ ape test
+INFO: Compiling 'Token.vy'.
+=================================== test session starts ====================================
+
+collected 5 items                                                                          
+
+tests/test_token.py .....                                                            [100%]
+
+==================================== 5 passed in 2.22s =====================================
+
+</code>
+</pre></div><p>Since we are using pytest under the hood, any pytest-specific flag will work. For example, if we'd like to filter down and run only one specific test, we can use the -k flag to do that. Also, notice how we do not need to compile Token.vy a second time.</p><p>‍</p><div class="w-embed"><pre><code class="language-bash">
+
+$ ape test -k approve
+=================================== test session starts ====================================
+
+collected 5 items / 4 deselected / 1 selected                                              
+
+tests/test_token.py .                                                                [100%]
+
+============================= 1 passed, 4 deselected in 0.71s ==============================
+
+</code>
+</pre></div><p>‍</p><p>We can also run tests from just one file by providing a path to that testing file. However, since all of our tests are in that one file already, it will run them all.</p><p>‍</p><div class="w-embed"><pre><code class="language-bash">
+
+$ ape test tests/test_token.py 
+=================================== test session starts ====================================
+
+collected 5 items                                                                          
+
+tests/test_token.py .....                                                            [100%]
+
+==================================== 5 passed in 2.19s =====================================
+
+</code>
+</pre></div><p>Now, let's show what happens when a test case fails. When a test case fails, ape test will show which file is failing, where it failed and why. If an assertion is causing the failure, it will also show the values in both sides of the assertion.</p><p>‍</p><div class="w-embed"><pre><code class="language-bash">
+
+$ ape test
+=================================== test session starts ====================================
+
+collected 5 items                                                                          
+
+tests/test_token.py F....                                                            [100%]
+
+========================================= FAILURES =========================================
+____________________________________ test_initial_state ____________________________________
+
+token = Token 0x274b028b03A250cA03644E6c578D81f019eE1323
+owner = TestAccount 0x1e59ce931B4CFea3fe4B875411e280e173cB7A9C
+
+    def test_initial_state(token, owner):
+        """
+        Test inital state of the contract.
+        """
+        # Check the token meta matches the deployment
+        #token.method_name() has access to all the methods in the smart contract.
+        assert token.name() == "Ape Token"
+        assert token.symbol() == "APE"
+&gt;       assert token.decimals() == 9
+E       assert 8 == 9
+E        +  where 8 = decimals() -&gt; uint8()
+E        +    where decimals() -&gt; uint8 = Token 0x274b028b03A250cA03644E6c578D81f019eE1323.decimals
+
+tests/test_token.py:14: AssertionError
+---------------------------------- Captured stdout setup -----------------------------------
+SUCCESS: Contract 'Token' deployed to: 0x274b028b03A250cA03644E6c578D81f019eE1323
+------------------------------------ Captured log setup ------------------------------------
+SUCCESS  ape:accounts.py:178 Contract 'Token' deployed to: 0x274b028b03A250cA03644E6c578D81f019eE1323
+================================= short test summary info ==================================
+FAILED tests/test_token.py::test_initial_state - assert 8 == 9
+=============================== 1 failed, 4 passed in 2.40s ================================
+
+
+</code>
+</pre></div><p>‍</p><p>If you want to debug a test case interactively, just run with the -I interactive mode flag. This flag will let you enter a console session at the line the failure occurs. This interactive prompt will have access to any variable available inside of that test, including any built-in fixtures that Ape provides.</p><p>‍</p><div class="w-embed"><pre><code class="language-bash">
+
+$ ape test -I
+=================================== test session starts ====================================
+
+collected 5 items                                                                          
+
+tests/test_token.py F
+Traceback:  File '~/work/token/tests/test_token.py':14 in test_initial_state
+  assert token.decimals() == 17
+
+Starting interactive mode. Type `exit` fail and halt current test.
+
+In [1]: token.decimals()
+Out[1]: 18
+
+In [2]: token.balanceOf(owner)
+Out[2]: 1000
+
+</code>
+</pre></div><p>To stop using this mode, type exit, and the session will continue.</p><h2>Summary</h2><p>Hopefully, the above was a very detailed introduction to testing with Ape. In future videos, we will show more advanced features like how to profile gas usage and measure code coverage using our advanced reporting features. Have a blast testing using Ape, and remember, "untested code is just ugly documentation"!</p><p>‍</p></div></div></div><div class="div_wrap_bottomwrap"><div class="div-block-244"><div class="div-block-107"><a href="https://academy.apeworx.io/submit" class="sib-ot w-button">SUBMIT&nbsp;YOUR&nbsp;PROJECT</a><a href="https://academy.apeworx.io/community-2" class="sib-ot w-button">GET&nbsp;HELP</a><a href="https://academy.apeworx.io/feedback" class="sib-ot w-button">LEAVE&nbsp;FEEDBACK</a><a href="https://github.com/ApeAcademy" class="sib-ot w-button">APE&nbsp;ACADEMY&nbsp;GITHUB</a></div></div><div class="section_ending_a section-7"><div class="div-block-139"><div class="div-block-143"><h1 class="heading-47">Didn’t find what you’re looking for?<br></h1></div><div class="w-layout-grid grid-8"><a id="w-node-c8936289-b19a-0584-9178-ad6ed225959f-30594ea8" href="https://academy.apeworx.io/community-2" class="link-block-14 w-inline-block"><div class="div-block-144"><h4 class="heading-48">Connect with the Communty</h4><div class="text-block-23">Connect with theApe community</div></div></a><a id="w-node-c8936289-b19a-0584-9178-ad6ed22595a5-30594ea8" href="https://academy.apeworx.io/request" class="link-block-14 w-inline-block"><div class="div-block-144"><h4 class="heading-48">Request a Tutorial</h4><div class="text-block-23"> Share or upvote tutorial ideas from the community</div></div></a><a id="w-node-c8936289-b19a-0584-9178-ad6ed22595ab-30594ea8" href="https://academy.apeworx.io/tutorials" class="link-block-14 w-inline-block"><div class="div-block-144"><h4 class="heading-48">View All of Our Tutorials</h4><div class="text-block-23">Find the Tutorial of your dreams</div></div></a></div></div></div></div></div><div data-animation="over-right" data-collapse="medium" data-duration="400" data-easing="ease" data-easing2="ease" role="banner" class="footernavy w-nav"><div class="div-block-99"><a href="https://www.youtube.com/channel/UCz-cD1gjJnSeP_Z0Bu1h05A" class="ape_footybutton w-button">Academy YouTube</a><a href="https://github.com/ApeAcademy" class="ape_footybutton w-button">Academy GIT</a><a href="https://github.com/ApeWorX" class="ape_footybutton w-button">Ape Git</a><a href="https://docs.apeworx.io/ape/stable/index.html" class="ape_footybutton w-button">Ape Docs</a></div><div class="w-nav-overlay" data-wf-ignore="" id="w-nav-overlay-1"></div></div><script src="./testing_files/jquery-3.5.1.min.dc5e7f18c8.js" type="text/javascript" integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="anonymous"></script><script src="./testing_files/apeworx-academy.ef9385886.js" type="text/javascript"></script></body></html>
