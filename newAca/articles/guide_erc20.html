@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Apeworx Academy</title>
+        <link rel="stylesheet" href="../styles.css">
+    </head>
+    <body>
+
+        <div class="navbar">
+            <div class="navbar-container">
+                <a href="#home" class="nav-link">Home</a>
+                <a href="#guides" class="nav-link">Guides</a>
+                <a href="#showcase" class="nav-link">Showcase</a>
+                <a href="#community-library" class="nav-link">Community
+                    Library</a>
+                <a href="#templates" class="nav-link">Templates</a>
+            </div>
+        </div>
+
+        <header class="header">
+            <h1>Make an ERC 20 Token</h1>
+        </header>
+
+        <main class="main-content">
+            <div class="container">
+                <h1 class="main-heading">GUIDES</h1>
+                <div class="guides">
+                    <button class="guide-button">Getting Started</button>
+                    <button class="guide-button">Deploy an NFT on
+                        OpenSea</button>
+                    <button class="guide-button">Ape StarkNet</button>
+                </div>
+            </div>
+        </main>
+
+        <footer class="footer">
+            <a href="#github" class="footer-link">Ape GitHub</a>
+            <a href="#academy-github" class="footer-link">Academy GitHub</a>
+            <a href="#dev-support" class="footer-link">Dev Support</a>
+            <a href="#contribute" class="footer-link">Contribute Content</a>
+            <a href="#partnership" class="footer-link">Partnership</a>
+        </footer>
+        <script>
+            document.addEventListener('DOMContentLoaded', function() {
+                fetch('../data/tutorials/2_erc20.json')
+                    .then(response => response.json())
+                    .then(data => {
+                        const mainContent = document.querySelector('.main-content .container');
+                        mainContent.innerHTML = ''; // Clear existing content
+            
+                        // Title and Author
+                        const title = document.createElement('h2');
+                        title.textContent = data.title;
+                        const author = document.createElement('p');
+                        author.textContent = `By ${data.author.name}, Last Updated: ${data.author.lastUpdated}`;
+                        mainContent.appendChild(title);
+                        mainContent.appendChild(author);
+            
+                        // Sections
+                        data.sections.forEach(section => {
+                            const sectionHeading = document.createElement('h3');
+                            sectionHeading.textContent = section.heading;
+                            mainContent.appendChild(sectionHeading);
+            
+                            section.subsections.forEach(subsection => {
+                                const subsectionTitle = document.createElement('h4');
+                                subsectionTitle.textContent = subsection.title;
+                                mainContent.appendChild(subsectionTitle);
+            
+                                const stepsList = document.createElement('ul');
+                                subsection.steps.forEach(step => {
+                                    const stepItem = document.createElement('li');
+                                    stepItem.textContent = step;
+                                    stepsList.appendChild(stepItem);
+                                });
+                                mainContent.appendChild(stepsList);
+            
+                                // Code snippets, if any
+                                if (subsection.codeSnippets && subsection.codeSnippets.length > 0) {
+                                    const codeBlock = document.createElement('pre');
+                                    subsection.codeSnippets.forEach(snippet => {
+                                        const codeLine = document.createElement('code');
+                                        codeLine.textContent = snippet;
+                                        codeBlock.appendChild(codeLine);
+                                        codeBlock.appendChild(document.createElement('br')); // New line
+                                    });
+                                    mainContent.appendChild(codeBlock);
+                                }
+                            });
+                        });
+            
+                        // Resources
+                        const resourcesHeading = document.createElement('h3');
+                        resourcesHeading.textContent = 'Resources';
+                        mainContent.appendChild(resourcesHeading);
+            
+                        const resourcesList = document.createElement('ul');
+                        data.resources.forEach(resource => {
+                            const resourceItem = document.createElement('li');
+                            const resourceLink = document.createElement('a');
+                            resourceLink.href = resource.url;
+                            resourceLink.textContent = resource.name;
+                            resourceItem.appendChild(resourceLink);
+                            resourcesList.appendChild(resourceItem);
+                        });
+                        mainContent.appendChild(resourcesList);
+                    })
+                    .catch(error => console.error('Error loading tutorial data:', error));
+            });
+            </script>
+    </body>
+</html>

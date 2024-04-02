@@ -1,0 +1,164 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Georgia', serif;
+    /* Updated for a more readable serif font */
+    background: #f4f4f4;
+    /* Softer background color */
+    color: #333;
+    padding: 20px;
+    /* Added padding */
+    line-height: 1.6;
+    /* Improved line height for readability */
+}
+
+.navbar {
+    background-color: #f5f5f5;
+    padding: 10px 0;
+}
+
+.navbar-container {
+    width: 80%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.nav-link {
+    text-decoration: none;
+    color: #333;
+    padding: 10px 15px;
+    text-transform: uppercase;
+    font-weight: bold;
+}
+
+.header {
+    text-align: center;
+    padding: 50px 0;
+}
+
+.header h1 {
+    font-size: 2rem;
+    text-transform: uppercase;
+}
+
+.main-content,
+.container {
+    max-width: 800px;
+    /* Unified max-width */
+    margin: 20px auto;
+    /* Increased margin for more space */
+    background: #fff;
+    /* Background for content area */
+    padding: 20px;
+    /* Increased padding */
+    border-radius: 8px;
+    /* Rounded corners */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    /* Subtle shadow for depth */
+}
+
+.main-heading,
+h2,
+h3,
+h4 {
+    color: #333;
+    margin-top: 40px;
+    /* Consistent top margin for headings */
+}
+
+.main-heading {
+    font-size: 28px;
+    /* Adjusted for readability */
+    margin-bottom: 20px;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+.guides {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    /* Maintained spacing */
+}
+
+.guide-button {
+    background: #FFFFFF;
+    border: 1px solid #000000;
+    padding: 10px 40px;
+    font-size: 16px;
+    width: 100%;
+    max-width: 300px;
+    text-align: left;
+    cursor: pointer;
+}
+
+.guide-button:hover {
+    background: #f5f5f5;
+}
+
+.footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 20px 0;
+    /* Increased padding */
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    border-top: 1px solid #000;
+    /* Added border-top for separation */
+}
+
+.footer-link {
+    text-decoration: none;
+    color: #fff;
+    /* Adjusted for contrast */
+    font-weight: bold;
+    margin: 0 10px;
+}
+
+/* Responsive design adjustments */
+@media screen and (max-width: 768px) {
+    body {
+        padding: 10px;
+    }
+
+    .navbar-container,
+    .header,
+    .main-content,
+    .container {
+        width: 90%;
+        /* Increased width for smaller screens */
+    }
+
+    .navbar-container {
+        flex-direction: column;
+    }
+
+    .nav-link,
+    .guide-button {
+        padding: 10px 0;
+        /* Adjusted padding */
+    }
+
+    .footer {
+        flex-direction: column;
+        /* Stack footer links vertically */
+    }
+
+    h1,
+    .main-heading,
+    h2,
+    h3,
+    h4 {
+        font-size: 90%;
+        /* Slightly reduce font size for small screens */
+    }
+}

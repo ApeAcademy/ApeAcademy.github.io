@@ -1,0 +1,96 @@
+{
+    "title": "Create an ERC-20 Token",
+    "author": {
+      "name": "Chris Cao",
+      "lastUpdated": "June 1, 2022"
+    },
+    "sections": [
+      {
+        "heading": "Getting started with Ape-Template",
+        "subsections": [
+          {
+            "title": "Introduction",
+            "steps": [
+              "Start with ape to create a smart contract project.",
+              "Use ape-template to custom-create your project.",
+              "Clone the template using `$ git clone https://github.com/ApeAcademy/token-template`.",
+              "Activate a python virtual environment.",
+              "Personalize the project with `$ ape template .`."
+            ],
+            "codeSnippets": [
+              "$ git clone https://github.com/ApeAcademy/token-template",
+              "$ ape template .",
+              "$ ape plugins list",
+              "$ ape plugins install vyper -y"
+            ]
+          },
+          {
+            "title": "CLI Prompts",
+            "steps": [
+              "The CLI will prompt you to change variable names to make your own.",
+              "If you like the default names, press enter to keep them."
+            ],
+            "codeSnippets": []
+          }
+        ]
+      },
+      {
+        "heading": "Understanding the Smart Contract",
+        "subsections": [
+          {
+            "title": "Why Vyper?",
+            "steps": [
+              "Bounds and overflow checking.",
+              "Support for signed integers and decimal fixed point numbers.",
+              "Decidability: Compute a precise upper bound for the gas consumption.",
+              "Strong typing and small compiler code.",
+              "Limited support for pure functions."
+            ],
+            "codeSnippets": []
+          },
+          {
+            "title": "ERC-20 Standard Functions",
+            "steps": [
+              "Total Supply: Tracks the summation of tokens across all addresses.",
+              "BalanceOf: A hashmap of all addresses that own the token.",
+              "Allowance: A 2-input argument mapping.",
+              "Transfer: Allows an individual to send some of their balance to a receiver.",
+              "TransferFrom: Allows an account to transfer assets to another account on your behalf.",
+              "Approve: Updates the allowance of the given operator."
+            ],
+            "codeSnippets": [
+              "totalSupply: public(uint256)",
+              "balanceOf: public(HashMap[address, uint256])",
+              "allowance: public(HashMap[address ,HashMap[address, uint256]])"
+            ]
+          }
+        ]
+      }
+    ],
+    "resources": [
+      {
+        "name": "Python 3.7.2 or later",
+        "url": "https://www.python.org/"
+      },
+      {
+        "name": "Ape Academy ERC-20",
+        "url": "https://github.com/ApeAcademy/ERC20"
+      },
+      {
+        "name": "EIP-20",
+        "url": "https://eips.ethereum.org/EIPS/eip-20"
+      },
+      {
+        "name": "Ape-Template",
+        "url": "https://github.com/ApeWorX/ape-template"
+      },
+      {
+        "name": "Cookiecutter",
+        "url": "https://cookiecutter.readthedocs.io/en/1.7.2/"
+      },
+      {
+        "name": "Vyper",
+        "url": "http://vyper.readthedocs.io/"
+      }
+    ]
+  }
